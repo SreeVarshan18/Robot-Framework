@@ -1,5 +1,13 @@
 *** Settings ***
 Library  SeleniumLibrary
+
+Suite Setup  Log  test suite setup
+
+Suite Teardown  Log  test suite teardown
+
+Test Setup  Log  test case setup
+
+Test Teardown  Log  test case teardown
 *** Variables ***
 ${web}  https://www.google.co.in/
 ${search}   flipkart
@@ -27,6 +35,12 @@ Flipkart Test
     Search Flipkart
     sleep  1s
     Click Button  class:L0Z3Pu
+
+Purchase Item Test
+    [Documentation]  Flipkart item page
+    [Tags]  Internet
+    sleep  1s
+    Click Element  class:_4rR01T
 
 *** Keywords ***
 Search Data
