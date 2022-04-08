@@ -40,7 +40,13 @@ Purchase Item Test
     [Documentation]  Flipkart item page
     [Tags]  Internet
     sleep  1s
-    Click Element  class:_4rR01T
+    Click Element  xpath=//html/body/div[1]/div/div[3]/div[1]/div[2]/div[3]/div/div/div/a/div[2]/div[1]/div[1]
+    sleep  1s
+    Switch window  title:APPLE iPhone 13 ( 128 GB GB Storage, 0 GB RAM ) Online at Best Price On Flipkart.com
+    sleep  1s
+    Click Element  xpath=//html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[2]/form/button
+    sleep  5s
+    Close Browser
 
 *** Keywords ***
 Search Data
