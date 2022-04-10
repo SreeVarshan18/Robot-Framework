@@ -1,8 +1,8 @@
 *** Settings ***
-
-
+Library  SeleniumLibrary
 *** Variables ***
-
+${web}  https://www.google.co.in/
+${search}   facebook
 
 *** Test Cases ***
 User Login Test
@@ -22,4 +22,18 @@ Admin Login Test
     [Documentation]  This is a test case for admin login
     [Tags]  admin
 
+Google Test
+    [Documentation]  Google search page
+    [Tags]  Internet
+    Open Browser    ${web}   chrome
+    Maximize Browser Window
+    sleep  1s
+    Search Data
+    sleep  1s
+    Submit Form
+    sleep  1s
+    Close Browser
+
 *** Keywords ***
+Search Data
+    Input Text  name:q  ${search}
