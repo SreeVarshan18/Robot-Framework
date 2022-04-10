@@ -24,21 +24,75 @@ User Login Test
     Add Password
     sleep  1s
     Click Element  xpath=//html/body/div/div/div[2]/form/center/button
+    sleep  1s
+
+
+User Dashboard Test
+    [Documentation]  user dashboard
+    [Tags]  user
+    Add Name
+    Add Author
+    Add Category
+    Add Price
+    Add Publisher
+    sleep  3s
+    Click Element  xpath=//html/body/div[2]/div/div[2]/form/center/button
+    sleep  1s
+    Click Element  xpath=//html/body/div[2]/div/div[2]/form/div/div/div/div[3]/button[2]
+    sleep  1s
+
+
+User Edit Test
+    [Documentation]  user edit
+    [Tags]  user
+    Click Element  xpath=//html/body/div[1]/div/div/nav/div/div/ul/li[2]/a
+    sleep  1s
+    Add Name
+    sleep  1s
+    Click Element  xpath=//html/body/div[2]/div/div[2]/form/center/button
+    sleep  1s
+    Click Link  name:link
+    sleep  2s
+    Add Book
+    Add Author
+    Add Category
+    Add Price
+    Add Publisher
+    sleep  1s
+    Click Element  xpath=//html/body/div[2]/div/div[2]/form/center/button
+    sleep  1s
+    Click Element  xpath=//html/body/div[2]/div/div[2]/form/div/div/div/div[3]/button[2]
+    sleep  3s
+
+User Search Test
+    [Documentation]  user search
+    [Tags]  user
+    Click Element  xpath=//html/body/div[1]/div/div/nav/div/div/ul/li[3]/a
+    sleep  2s
+    Add Book
+    sleep  2s
+    Click Element  xpath=//html/body/div[2]/div/div[2]/form/center/button
+    sleep  3s
+    Click Element  xpath=//html/body/div[1]/div/div/nav/div/div/ul/li[4]/a
+    sleep  2s
 
 
 Admin Login Test
     [Documentation]  admin login
     [Tags]  admin
+    Click Element  xpath=//html/body/nav/div/div/ul/li/a
+    sleep  2s
     Add Admin
     Add Pass
     sleep  1s
     Click Element  xpath=//html/body/div/div/div[2]/form/center/button
+    sleep  1s
 
 
 Dashboard Test
     [Documentation]  dashboard
-    [Tags]  user
-    Add Book Name
+    [Tags]  admin
+    Add Name
     Add Author
     Add Category
     Add Price
@@ -52,7 +106,7 @@ Dashboard Test
 
 Edit Test
     [Documentation]  edit page
-    [Tags]  user
+    [Tags]  admin
     Click Element  xpath=//html/body/div[1]/div/div/nav/div/div/ul/li[3]/a
     sleep  1s
     Add Book
@@ -73,7 +127,7 @@ Edit Test
 
 Delete Test
     [Documentation]  delete page
-    [Tags]  user
+    [Tags]  admin
     Click Element  xpath=//html/body/div[1]/div/div/nav/div/div/ul/li[5]/a
     sleep  1s
     Add New Name
@@ -84,10 +138,8 @@ Delete Test
 
 Logout Test
     [Documentation]  logout
-    [Tags]  user
+    [Tags]  admin
     Click Element  xpath=//html/body/div[1]/div/div/nav/div/div/ul/li[6]/a
-    sleep  2s
-    Click Element  xpath=//html/body/nav/div/div/ul/li/a
     sleep  2s
     Close Browser
 
@@ -105,7 +157,7 @@ Add Admin
 Add Pass
     Input Text  name:pass  ${pass}
 
-Add Book Name
+Add Name
     Input Text  name:name  ${name}
 
 Add Author
